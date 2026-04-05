@@ -109,26 +109,20 @@ class BukuResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('kategori.nama_kategori')
-                    ->label('Kategori')
-                    ->searchable(),
+                    ->label('Kategori'),
 
-                TextColumn::make('kode_buku')
-                    ->searchable(),
+                TextColumn::make('kode_buku'),
 
                 TextColumn::make('isbn')
-                    ->label('ISBN')
-                    ->searchable(),
+                    ->label('ISBN'),
 
-                TextColumn::make('judul')
-                    ->searchable(),
+                TextColumn::make('judul'),
 
-                TextColumn::make('penulis')
-                    ->searchable(),
+                TextColumn::make('penulis'),
 
                 TextColumn::make('tahun_terbit'),
 
-                TextColumn::make('rak')
-                    ->searchable(),
+                TextColumn::make('rak'),
 
                 ImageColumn::make('cover')
                     ->disk('public'),
@@ -138,7 +132,46 @@ class BukuResource extends Resource
                     ->sortable(),
             ])
             ->filters([
-                //
+
+                // 🔍 SEARCH GLOBAL
+                Tables\Filters\Filter::make('search')
+                    ->label('Cari Buku')
+                    ->form([
+                        TextInput::make('keyword')
+                            ->placeholder('Judul / Penulis / ISBN / Kode Buku'),
+                    ])
+                    ->query(function (Builder $query, array $data) {
+                        if (!$data['keyword'])
+                            return;
+
+                        $query->where(function ($q) use ($data) {
+                            $q->where('judul', 'like', '%' . $data['keyword'] . '%')
+                                ->orWhere('penulis', 'like', '%' . $data['keyword'] . '%')
+                                ->orWhere('isbn', 'like', '%' . $data['keyword'] . '%')
+                                ->orWhere('kode_buku', 'like', '%' . $data['keyword'] . '%');
+                        });
+                    }),
+
+                // 📚 FILTER KATEGORI
+                Tables\Filters\SelectFilter::make('kategori_id')
+                    ->label('Kategori')
+                    ->options(Kategori::pluck('nama_kategori', 'id'))
+                    ->searchable(),
+
+                // 🗄️ FILTER RAK
+                Tables\Filters\Filter::make('rak')
+                    ->label('Rak Buku')
+                    ->form([
+                        TextInput::make('rak')
+                            ->placeholder('Contoh: Rak-A'),
+                    ])
+                    ->query(function (Builder $query, array $data) {
+                        if (!$data['rak'])
+                            return;
+
+                        $query->where('rak', 'like', '%' . $data['rak'] . '%');
+                    }),
+
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
