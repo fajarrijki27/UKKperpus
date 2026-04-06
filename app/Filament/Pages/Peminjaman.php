@@ -85,7 +85,7 @@ class Peminjaman extends Page
 
         //  CEK PEMINJAMAN AKTIF
         $peminjamanAktif = \App\Models\Peminjaman::where('anggota_id', $anggota->id)
-            ->where('status', 'dipinjam')
+            ->whereIn('status', ['dipinjam', 'diproses'])
             ->exists();
 
         if ($peminjamanAktif) {
@@ -163,7 +163,7 @@ class Peminjaman extends Page
             return false;
 
         return \App\Models\Peminjaman::where('anggota_id', $anggota->id)
-            ->where('status', 'dipinjam')
+            ->whereIn('status', ['dipinjam', 'diproses'])
             ->exists();
     }
     protected function getHeaderActions(): array
