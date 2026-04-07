@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PengembalianPrintController;
 use App\Http\Controllers\PeminjamanController;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 Route::get('/', function () {
     return redirect('/admin/login');
@@ -19,11 +20,16 @@ Route::get('/peminjaman/download/{id}', [PeminjamanController::class, 'download'
 
 Route::get('/print/laporan-peminjaman', function () {
 
+    $awal = request('awal');
+    $akhir = request('akhir');
+
     $data = \App\Models\Peminjaman::with(['anggota.user', 'details', 'pengembalian'])
-        ->whereBetween('tanggal_pinjam', [request('awal'), request('akhir')])
+        ->whereBetween('tanggal_pinjam', [$awal, $akhir])
         ->where('status', 'dikembalikan')
         ->get();
 
-    return view('print.laporan', compact('data'));
+    $pdf = Pdf::loadView('print.laporan', compact('data', 'awal', 'akhir'))
+        ->setPaper('A4', 'portrait');
 
+    return $pdf->stream('laporan-peminjaman.pdf');
 })->name('print.laporan.peminjaman');
