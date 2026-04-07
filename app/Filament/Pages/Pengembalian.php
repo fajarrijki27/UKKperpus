@@ -22,6 +22,8 @@ class Pengembalian extends Page
     public $peminjaman = null;
     public $denda = 0;
     public $keterangan = '';
+    public $dendaPerHari = 1000;
+    public $totalDenda = 0;
     public static function canAccess(): bool
     {
         return Gate::allows('page_Pengembalian');
@@ -40,7 +42,7 @@ class Pengembalian extends Page
             ->first();
 
         if ($this->peminjaman) {
-            $this->denda = 0; // default kosong,
+            $this->hitungDenda();
         }
     }
 
@@ -114,5 +116,36 @@ class Pengembalian extends Page
 
         // 🔥 RESET AGAR UI KOSONG LAGI
         $this->reset(['kode', 'peminjaman']);
+    }
+
+    public function updatedDendaPerHari()
+    {
+        $this->hitungDenda();
+    }
+
+    public function hitungDenda()
+    {
+        if ($this->peminjaman) {
+            $jatuhTempo = Carbon::parse($this->peminjaman->tanggal_jatuh_tempo);
+            $sekarang = now();
+
+            $telatJam = $jatuhTempo->diffInHours($sekarang, false);
+
+            if ($telatJam > 0) {
+                $hariDecimal = $telatJam / 24;
+                $telatHari = $hariDecimal < 1 ? 1 : floor($hariDecimal);
+            } else {
+                $telatHari = 0;
+            }
+
+            $this->totalDenda = $telatHari * $this->dendaPerHari;
+        } else {
+            $this->totalDenda = 0;
+        }
+    }
+
+    public function gunakanDenda()
+    {
+        $this->denda = $this->totalDenda;
     }
 }
