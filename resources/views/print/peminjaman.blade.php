@@ -106,11 +106,26 @@
     <div class="card">
 
         {{-- HEADER --}}
-        <div style="margin-bottom:20px;">
-            <div class="title">Struk Peminjaman</div>
-            <div class="subtitle">Bukti transaksi peminjaman buku</div>
+        <div style="margin-bottom:20px; display:flex; align-items:center; gap:15px;">
+
+            <!-- LOGO -->
+            <img src="{{ asset('storage/logo/logo.png') }}" alt="Logo" style="
+        width:60px;
+        height:60px;
+        object-fit:contain;
+    ">
+
+            <!-- TEXT -->
+            <div>
+                <div class="title">Struk Peminjaman</div>
+                <div class="subtitle">Bukti transaksi peminjaman buku</div>
+                <div class="subtitle">Di Perpustakaan SMKS Igasar</div>
+            </div>
+
         </div>
 
+        <hr style="margin-top:15px;">
+        
         {{-- INFO --}}
         <table>
             <tr>
@@ -147,12 +162,12 @@
                     <div class="buku-item">
 
                         <img src="{{ asset('storage/' . $detail->buku->cover) }}" style="
-                                width:55px;
-                                height:75px;
-                                object-fit:cover;
-                                border-radius:6px;
-                                border:1px solid #ddd;
-                            ">
+                                        width:55px;
+                                        height:75px;
+                                        object-fit:cover;
+                                        border-radius:6px;
+                                        border:1px solid #ddd;
+                                    ">
 
                         <div style="flex:1;">
                             <div style="font-weight:600;">

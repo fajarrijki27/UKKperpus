@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Invoice Peminjaman</title>
@@ -87,77 +88,91 @@
     </style>
 
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-    {{-- HEADER --}}
-    <div class="header">
-        <div class="title">INVOICE PEMINJAMAN</div>
-        <div class="subtitle">Perpustakaan Sekolah</div>
-    </div>
+        {{-- HEADER --}}
+        <div class="header" style="display:flex; align-items:center; gap:10px;">
 
-    {{-- INFO --}}
-    <table class="info-table">
-        <tr>
-            <td class="label">Kode</td>
-            <td>: {{ $peminjaman->kode_peminjaman }}</td>
-        </tr>
+            <!-- LOGO -->
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('storage/logo/logo.png'))) }}"
+                width="60">
 
-        <tr>
-            <td class="label">Nama</td>
-            <td>: {{ $peminjaman->anggota->user->name ?? '-' }}</td>
-        </tr>
+            <!-- TEXT -->
+            <div>
+                <div class="title">INVOICE PEMINJAMAN</div>
+                <div class="subtitle">Bukti transaksi peminjaman buku</div>
+                <div class="subtitle">Di Perpustakaan SMKS Igasar</div>
+            </div>
 
-        <tr>
-            <td class="label">Tanggal Pinjam</td>
-            <td>: {{ \Carbon\Carbon::parse($peminjaman->tanggal_pinjam)->format('d M Y') }}</td>
-        </tr>
+        </div>
 
-        <tr>
-            <td class="label">Jatuh Tempo</td>
-            <td>: {{ \Carbon\Carbon::parse($peminjaman->tanggal_jatuh_tempo)->format('d M Y') }}</td>
-        </tr>
-    </table>
+        <hr style="margin-top:15px;">
 
-    {{-- TABLE BUKU --}}
-    <table class="table">
-        <thead>
+        {{-- INFO --}}
+        <table class="info-table">
             <tr>
-                <th style="width:40px;">No</th>
-                <th>Judul Buku</th>
-                <th style="width:80px;" class="text-right">Qty</th>
+                <td class="label">Kode</td>
+                <td>: {{ $peminjaman->kode_peminjaman }}</td>
             </tr>
-        </thead>
 
-        <tbody>
-            @foreach($peminjaman->details as $index => $detail)
+            <tr>
+                <td class="label">Nama</td>
+                <td>: {{ $peminjaman->anggota->user->name ?? '-' }}</td>
+            </tr>
+
+            <tr>
+                <td class="label">Tanggal Pinjam</td>
+                <td>: {{ \Carbon\Carbon::parse($peminjaman->tanggal_pinjam)->format('d M Y') }}</td>
+            </tr>
+
+            <tr>
+                <td class="label">Jatuh Tempo</td>
+                <td>: {{ \Carbon\Carbon::parse($peminjaman->tanggal_jatuh_tempo)->format('d M Y') }}</td>
+            </tr>
+        </table>
+
+        {{-- TABLE BUKU --}}
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>{{ $index + 1 }}</td>
-                    <td>{{ $detail->buku->judul }}</td>
-                    <td class="text-right">{{ $detail->qty }}</td>
+                    <th style="width:40px;">No</th>
+                    <th>Judul Buku</th>
+                    <th style="width:80px;" class="text-right">Qty</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
 
-    {{-- TOTAL --}}
-    <table class="total-box">
-        <tr>
-            <td class="text-right total">
-                Total Buku: {{ $peminjaman->details->sum('qty') }}
-            </td>
-        </tr>
-    </table>
+            <tbody>
+                @foreach($peminjaman->details as $index => $detail)
+                    <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ $detail->buku->judul }}</td>
+                        <td class="text-right">{{ $detail->qty }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
 
-    {{-- FOOTER --}}
-    <div class="footer">
-        * Harap mengembalikan buku sebelum tanggal jatuh tempo. <br>
-        * Denda akan dikenakan jika terlambat. <br>
-        * Harap simpan Struk Transaksi
+        {{-- TOTAL --}}
+        <table class="total-box">
+            <tr>
+                <td class="text-right total">
+                    Total Buku: {{ $peminjaman->details->sum('qty') }}
+                </td>
+            </tr>
+        </table>
+
+        {{-- FOOTER --}}
+        <div class="footer">
+            * Harap mengembalikan buku sebelum tanggal jatuh tempo. <br>
+            * Denda akan dikenakan jika terlambat. <br>
+            * Harap simpan Struk Transaksi
+        </div>
+
     </div>
-
-</div>
 
 </body>
+
 </html>
