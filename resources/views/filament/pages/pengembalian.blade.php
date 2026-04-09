@@ -155,7 +155,7 @@
 
                         {{-- NOMINAL PER HARI --}}
                         <label style="font-size:14px; color:gray;">Denda / Hari</label>
-                        <input type="number" wire:model.live="dendaPerHari" style="
+                        <input type="number" wire:model.live="dendaPerHari" min="0" style="
                                 width:100%;
                                 padding:10px;
                                 border:1px solid #ddd;

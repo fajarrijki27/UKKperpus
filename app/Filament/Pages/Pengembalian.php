@@ -118,8 +118,9 @@ class Pengembalian extends Page
         $this->reset(['kode', 'peminjaman']);
     }
 
-    public function updatedDendaPerHari()
+    public function updatedDendaPerHari($value)
     {
+        $this->dendaPerHari = (int) ($value ?: 0);
         $this->hitungDenda();
     }
 
@@ -138,7 +139,9 @@ class Pengembalian extends Page
                 $telatHari = 0;
             }
 
-            $this->totalDenda = $telatHari * $this->dendaPerHari;
+            $dendaPerHari = (int) ($this->dendaPerHari ?: 0);
+
+            $this->totalDenda = $telatHari * $dendaPerHari;
         } else {
             $this->totalDenda = 0;
         }
