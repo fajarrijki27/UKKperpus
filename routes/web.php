@@ -33,3 +33,6 @@ Route::get('/print/laporan-peminjaman', function () {
 
     return $pdf->stream('laporan-peminjaman.pdf');
 })->name('print.laporan.peminjaman');
+
+Route::post('/peminjaman/{id}/kirim-email', [PeminjamanController::class, 'kirimEmail'])
+    ->name('peminjaman.kirimEmail');

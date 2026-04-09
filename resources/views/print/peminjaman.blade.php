@@ -102,6 +102,23 @@
 </head>
 
 <body>
+    @if(session('success'))
+        <div id="notif" style="
+            background:#dcfce7;
+            color:#166534;
+            padding:12px;
+            border-radius:8px;
+            margin-bottom:15px;
+        ">
+            {{ session('success') }}
+        </div>
+
+        <script>
+            setTimeout(() => {
+                document.getElementById('notif').style.display = 'none';
+            }, 2000);
+        </script>
+    @endif
 
     <div class="card">
 
@@ -125,7 +142,7 @@
         </div>
 
         <hr style="margin-top:15px;">
-        
+
         {{-- INFO --}}
         <table>
             <tr>
@@ -162,12 +179,12 @@
                     <div class="buku-item">
 
                         <img src="{{ asset('storage/' . $detail->buku->cover) }}" style="
-                                        width:55px;
-                                        height:75px;
-                                        object-fit:cover;
-                                        border-radius:6px;
-                                        border:1px solid #ddd;
-                                    ">
+                                                    width:55px;
+                                                    height:75px;
+                                                    object-fit:cover;
+                                                    border-radius:6px;
+                                                    border:1px solid #ddd;
+                                                ">
 
                         <div style="flex:1;">
                             <div style="font-weight:600;">
@@ -206,6 +223,12 @@
                 </button>
             </a>
 
+            <form action="{{ route('peminjaman.kirimEmail', $peminjaman->id) }}" method="POST">
+                @csrf
+                <button type="submit" class="btn" style="background:#9333ea; color:white;">
+                    Kirim Email
+                </button>
+            </form>
         </div>
 
     </div>
