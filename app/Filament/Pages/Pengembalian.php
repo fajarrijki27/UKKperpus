@@ -9,6 +9,8 @@ use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\StrukPengembalianMail;
 
 class Pengembalian extends Page
 {
@@ -151,4 +153,39 @@ class Pengembalian extends Page
     {
         $this->denda = $this->totalDenda;
     }
+
+    public function kirimEmail()
+    {
+        if (!$this->pengembalianId) {
+            Notification::make()
+                ->title('Struk belum tersedia')
+                ->danger()
+                ->send();
+            return;
+        }
+
+        $pengembalian = PengembalianModel::with(
+            'peminjaman.anggota.user',
+            'peminjaman.details.buku'
+        )->find($this->pengembalianId);
+
+        // ambil email dari user lewat anggota
+        $email = $pengembalian->peminjaman->anggota->user->email ?? null;
+
+        if (!$email) {
+            Notification::make()
+                ->title('Email anggota tidak ditemukan')
+                ->danger()
+                ->send();
+            return;
+        }
+
+        Mail::to($email)
+            ->send(new StrukPengembalianMail($pengembalian));
+
+        Notification::make()
+            ->title('Email berhasil dikirim ke ' . $email)
+            ->success()
+            ->send();
+    }   
 }
