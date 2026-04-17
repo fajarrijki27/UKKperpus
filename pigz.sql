@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3311
--- Generation Time: Apr 06, 2026 at 01:38 AM
+-- Generation Time: Apr 17, 2026 at 06:42 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.3.15
 
@@ -94,7 +94,11 @@ INSERT INTO `anggotas` (`id`, `user_id`, `nis`, `kelas`, `jenis_kelamin`, `tangg
 (47, 48, '10416743', 'XI-PPLG', 'Perempuan', '2019-04-26', '(469) 297-4623', '64062 Powlowski Lodge Suite 201\nQuitzonstad, WA 56113', '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
 (48, 49, '10917621', 'XII-PPLG', 'Perempuan', '1979-01-13', '+12345052058', '984 Wilderman Fords Apt. 329\nMooreport, OR 76493-5771', '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
 (49, 50, '30531902', 'XI-TBSM', 'Laki-laki', '2015-08-17', '(678) 287-6570', '851 Wyman Mountains Suite 311\nKshlerinchester, NJ 74247-2958', '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
-(50, 51, '59461374', 'XI-TJKT', 'Perempuan', '1974-07-24', '580.393.3464', '2025 Yost Green Suite 915\nBradlymouth, VT 24243-2425', '2026-04-05 07:47:53', '2026-04-05 07:47:53');
+(50, 51, '59461374', 'XI-TJKT', 'Perempuan', '1974-07-24', '580.393.3464', '2025 Yost Green Suite 915\nBradlymouth, VT 24243-2425', '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
+(51, 53, '64532', 'XII-PPLG', 'Laki-laki', '2007-07-27', '0831 1317 1374', 'ujhgfds', '2026-04-06 13:21:43', '2026-04-06 13:21:43'),
+(52, 56, '64532888', 'X-PPLG', 'Laki-laki', '2025-06-17', '0831 1317 1374', 'asdsadasdas', '2026-04-07 07:15:46', '2026-04-07 07:15:46'),
+(53, 54, NULL, NULL, 'Perempuan', '2003-07-31', '0831 1234 5678', 'asjdgasda', '2026-04-07 07:16:51', '2026-04-07 07:16:51'),
+(54, 57, '34567890', 'XII-TJKT', 'Laki-laki', '2008-06-14', '0812 3456 7890', 'rghjkl', '2026-04-14 03:19:18', '2026-04-14 03:19:18');
 
 -- --------------------------------------------------------
 
@@ -123,11 +127,11 @@ CREATE TABLE `bukus` (
 --
 
 INSERT INTO `bukus` (`id`, `kategori_id`, `kode_buku`, `isbn`, `judul`, `penulis`, `penerbit`, `tahun_terbit`, `rak`, `cover`, `stok`, `created_at`, `updated_at`) VALUES
-(1, 12, 'BK-9156', '9780608875798', 'Officiis et illo eligendi.', 'Titus Skiles', 'Nienow, Cronin and Fahey', 2000, 'Rak-n', 'covers/book3.jpg', 4, '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
+(1, 12, 'BK-9156', '9780608875798', 'Officiis et illo eligendi.', 'Titus Skiles', 'Nienow, Cronin and Fahey', 2000, 'Rak-n', 'covers/book3.jpg', 6, '2026-04-05 07:47:53', '2026-04-09 08:12:47'),
 (2, 11, 'BK-5999', '9796565188079', 'Enim debitis sint.', 'Dixie Prosacco', 'Armstrong, Koelpin and D\'Amore', 2007, 'Rak-x', 'covers/book3.jpg', 6, '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
-(3, 2, 'BK-7070', '9786897430465', 'Consequatur tenetur velit inventore nostrum.', 'Crystal Weber', 'Fahey and Sons', 2012, 'Rak-v', 'covers/book3.jpg', 8, '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
-(4, 13, 'BK-6321', '9795152570686', 'Voluptatem consequatur magni eum.', 'Weldon Jast I', 'Lesch and Sons', 2017, 'Rak-h', 'covers/book1.jpg', 6, '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
-(5, 2, 'BK-4987', '9792936820753', 'Recusandae autem numquam.', 'Loy Crooks', 'Medhurst, Waters and Johnston', 2010, 'Rak-b', 'covers/book2.jpg', 10, '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
+(3, 2, 'BK-7070', '9786897430465', 'Consequatur tenetur velit inventore nostrum.', 'Crystal Weber', 'Fahey and Sons', 2012, 'Rak-v', 'covers/book3.jpg', 1, '2026-04-05 07:47:53', '2026-04-09 08:46:43'),
+(4, 13, 'BK-6321', '9795152570686', 'Voluptatem consequatur magni eum.', 'Weldon Jast I', 'Lesch and Sons', 2017, 'Rak-h', 'covers/book1.jpg', 6, '2026-04-05 07:47:53', '2026-04-14 03:54:14'),
+(5, 2, 'BK-4987', '9792936820753', 'Recusandae autem numquam.', 'Loy Crooks', 'Medhurst, Waters and Johnston', 2010, 'Rak-b', 'covers/book2.jpg', 11, '2026-04-05 07:47:53', '2026-04-09 08:27:31'),
 (6, 10, 'BK-6295', '9792607865144', 'Rerum ut voluptas.', 'Alessandra Sawayn', 'Glover, Walker and Reilly', 2022, 'Rak-e', 'covers/book4.jpg', 4, '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
 (7, 9, 'BK-6864', '9786185623395', 'Aliquam soluta assumenda alias.', 'Cristal Steuber', 'Wehner, Veum and Langworth', 2023, 'Rak-w', 'covers/book2.jpg', 3, '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
 (8, 7, 'BK-9014', '9797346312218', 'Perferendis dolores eum repudiandae.', 'Antonetta Monahan', 'Reichel, Marks and Hauck', 2008, 'Rak-e', 'covers/book2.jpg', 8, '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
@@ -155,12 +159,12 @@ INSERT INTO `bukus` (`id`, `kategori_id`, `kode_buku`, `isbn`, `judul`, `penulis
 (30, 14, 'BK-4266', '9782240678713', 'Alias culpa ex repudiandae.', 'Miss Iva Williamson', 'Moore-Abshire', 2024, 'Rak-i', 'covers/book1.jpg', 5, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (31, 2, 'BK-5092', '9799668735164', 'Fugit suscipit ipsam et.', 'Deion Hodkiewicz', 'Hartmann LLC', 2002, 'Rak-l', 'covers/book5.jpg', 6, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (32, 8, 'BK-2848', '9780223617865', 'Vero iure laboriosam.', 'Chester Quigley DDS', 'Bruen and Sons', 2021, 'Rak-w', 'covers/book1.jpg', 9, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
-(33, 11, 'BK-2547', '9790366847289', 'Fugiat dolor officia et.', 'Janessa Konopelski Sr.', 'Pacocha Inc', 2023, 'Rak-l', 'covers/book1.jpg', 1, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
+(33, 11, 'BK-2547', '9790366847289', 'Fugiat dolor officia et.', 'Janessa Konopelski Sr.', 'Pacocha Inc', 2023, 'Rak-l', 'covers/book1.jpg', 2, '2026-04-05 07:47:54', '2026-04-07 07:24:22'),
 (34, 7, 'BK-7264', '9785636235309', 'Quo facilis eaque rerum.', 'Mrs. Julie Deckow', 'Mitchell-Schumm', 2014, 'Rak-g', 'covers/book5.jpg', 10, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (35, 14, 'BK-7785', '9784300669143', 'Qui placeat eveniet.', 'Mustafa Armstrong PhD', 'Lemke Group', 2005, 'Rak-d', 'covers/book5.jpg', 9, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (36, 4, 'BK-2733', '9787522175614', 'Commodi maiores iure.', 'Jayden Kilback V', 'Bode-Gorczany', 2020, 'Rak-t', 'covers/book5.jpg', 4, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (37, 9, 'BK-7906', '9782162527939', 'Animi et alias.', 'Jamison Bradtke', 'Champlin and Sons', 2024, 'Rak-d', 'covers/book1.jpg', 4, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
-(38, 7, 'BK-1895', '9787054948113', 'Quos quas alias quam cumque.', 'Kaitlyn Grady', 'Abbott and Sons', 2007, 'Rak-n', 'covers/book5.jpg', 1, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
+(38, 7, 'BK-1895', '9787054948113', 'Quos quas alias quam cumque.', 'Kaitlyn Grady', 'Abbott and Sons', 2007, 'Rak-n', 'covers/book5.jpg', 3, '2026-04-05 07:47:54', '2026-04-14 03:53:16'),
 (39, 3, 'BK-8652', '9786538844309', 'Qui voluptas vel blanditiis et.', 'Dr. Karelle Schultz V', 'Parisian-White', 2017, 'Rak-z', 'covers/book3.jpg', 6, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (40, 1, 'BK-7684', '9783615248180', 'Iure voluptatibus quo minus.', 'Raven Marvin', 'Lockman, Osinski and Hilpert', 2000, 'Rak-m', 'covers/book2.jpg', 4, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (41, 2, 'BK-1707', '9791802538082', 'Voluptatem modi at dolor.', 'Flavie Hodkiewicz', 'Bayer and Sons', 2016, 'Rak-x', 'covers/book5.jpg', 4, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
@@ -183,13 +187,13 @@ INSERT INTO `bukus` (`id`, `kategori_id`, `kode_buku`, `isbn`, `judul`, `penulis
 (58, 10, 'BK-8192', '9793601412433', 'Odio ex.', 'Juliana Beier', 'Nader Group', 2003, 'Rak-x', 'covers/book2.jpg', 2, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (59, 10, 'BK-2616', '9788567223896', 'Qui sed quibusdam soluta.', 'Vallie Hickle', 'Davis-Nicolas', 2022, 'Rak-b', 'covers/book2.jpg', 4, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (60, 5, 'BK-1449', '9786424409155', 'Molestiae consectetur.', 'Ramona Considine', 'Collier-Simonis', 2018, 'Rak-k', 'covers/book4.jpg', 2, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
-(61, 6, 'BK-5538', '9795057440510', 'Corporis voluptates repellat vitae ipsum.', 'Josh Mertz IV', 'Murray-Spencer', 2005, 'Rak-j', 'covers/book3.jpg', 10, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
+(61, 6, 'BK-5538', '9795057440510', 'Corporis voluptates repellat vitae ipsum.', 'Josh Mertz IV', 'Murray-Spencer', 2005, 'Rak-j', 'covers/book3.jpg', 11, '2026-04-05 07:47:54', '2026-04-07 01:27:45'),
 (62, 7, 'BK-2373', '9780243533299', 'Officia pariatur aut.', 'Mrs. Jody Keebler V', 'Predovic, Weissnat and Zulauf', 2022, 'Rak-z', 'covers/book2.jpg', 8, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (63, 4, 'BK-9904', '9791901177632', 'Quod consequatur recusandae voluptatem officiis.', 'Miller Stamm', 'Bernier-Nienow', 2008, 'Rak-x', 'covers/book5.jpg', 8, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (64, 3, 'BK-2572', '9793160689659', 'Eum sed consectetur.', 'Alysha Schroeder', 'Mante-Macejkovic', 2016, 'Rak-m', 'covers/book2.jpg', 6, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (65, 9, 'BK-7052', '9780562111802', 'Ipsam temporibus molestiae.', 'Winifred Grimes', 'Zulauf LLC', 2000, 'Rak-o', 'covers/book3.jpg', 1, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (66, 7, 'BK-8701', '9780359747054', 'Voluptas sint et culpa.', 'Royal Greenholt', 'Price, Waters and Rosenbaum', 2021, 'Rak-n', 'covers/book3.jpg', 9, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
-(67, 5, 'BK-4854', '9794727942118', 'Suscipit magni alias quisquam ipsam.', 'Alana Borer', 'Keebler, Cormier and Lynch', 2018, 'Rak-q', 'covers/book3.jpg', 5, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
+(67, 5, 'BK-4854', '9794727942118', 'Suscipit magni alias quisquam ipsam.', 'Alana Borer', 'Keebler, Cormier and Lynch', 2018, 'Rak-q', 'covers/book3.jpg', 7, '2026-04-05 07:47:54', '2026-04-07 01:27:45'),
 (68, 13, 'BK-7242', '9786170551511', 'Qui enim iure.', 'Clark Simonis', 'Collins, Vandervort and Grant', 2022, 'Rak-h', 'covers/book4.jpg', 4, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (69, 3, 'BK-8089', '9798230470205', 'Consequuntur accusamus aut qui.', 'Prof. Elijah Hoppe', 'Little-Stracke', 2024, 'Rak-q', 'covers/book5.jpg', 10, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (70, 7, 'BK-5750', '9786043961607', 'Illum sed.', 'Torrey Lang', 'Schinner-Wunsch', 2000, 'Rak-g', 'covers/book3.jpg', 2, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
@@ -197,7 +201,7 @@ INSERT INTO `bukus` (`id`, `kategori_id`, `kode_buku`, `isbn`, `judul`, `penulis
 (72, 8, 'BK-9173', '9795635927921', 'Placeat consequatur molestiae veniam.', 'Mr. Amani Kutch', 'Schamberger-Hessel', 2014, 'Rak-a', 'covers/book5.jpg', 5, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (73, 2, 'BK-5634', '9796263167857', 'Rerum enim maiores voluptas.', 'Camren Nicolas', 'Reinger-Maggio', 2003, 'Rak-b', 'covers/book2.jpg', 1, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (74, 7, 'BK-2164', '9789812788085', 'Ut et temporibus.', 'Keith Towne', 'Bauch PLC', 2008, 'Rak-t', 'covers/book2.jpg', 3, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
-(75, 5, 'BK-4707', '9789808991673', 'Deserunt qui laborum.', 'Sophia Lynch', 'Schimmel, Waelchi and Schaden', 2023, 'Rak-q', 'covers/book5.jpg', 9, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
+(75, 5, 'BK-4707', '9789808991673', 'Deserunt qui laborum.', 'Sophia Lynch', 'Schimmel, Waelchi and Schaden', 2023, 'Rak-q', 'covers/book5.jpg', 10, '2026-04-05 07:47:54', '2026-04-07 07:24:22'),
 (76, 3, 'BK-2776', '9799532743318', 'Laboriosam non accusantium.', 'Salvatore Lueilwitz', 'Toy LLC', 2004, 'Rak-z', 'covers/book5.jpg', 6, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (77, 13, 'BK-1501', '9783513478122', 'Voluptatem facere ullam repudiandae.', 'Mac Schmidt', 'Keebler-Feil', 2002, 'Rak-y', 'covers/book2.jpg', 2, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
 (78, 1, 'BK-1354', '9781667946214', 'Ipsa eum dolores.', 'Jessy Heller', 'Koepp, Stiedemann and Brakus', 2023, 'Rak-q', 'covers/book5.jpg', 6, '2026-04-05 07:47:54', '2026-04-05 07:47:54'),
@@ -241,9 +245,15 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('p_igz_cache_livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:2;', 1775391233),
-('p_igz_cache_livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1775391233;', 1775391233),
-('p_igz_cache_spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:61:{i:0;a:4:{s:1:\"a\";i:1;s:1:\"b\";s:12:\"view_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:1;a:4:{s:1:\"a\";i:2;s:1:\"b\";s:16:\"view_any_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:2;a:4:{s:1:\"a\";i:3;s:1:\"b\";s:14:\"create_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:3;a:4:{s:1:\"a\";i:4;s:1:\"b\";s:14:\"update_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:4;a:4:{s:1:\"a\";i:5;s:1:\"b\";s:15:\"restore_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:5;a:4:{s:1:\"a\";i:6;s:1:\"b\";s:19:\"restore_any_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:6;a:4:{s:1:\"a\";i:7;s:1:\"b\";s:17:\"replicate_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:7;a:4:{s:1:\"a\";i:8;s:1:\"b\";s:15:\"reorder_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:8;a:4:{s:1:\"a\";i:9;s:1:\"b\";s:14:\"delete_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:9;a:4:{s:1:\"a\";i:10;s:1:\"b\";s:18:\"delete_any_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:10;a:4:{s:1:\"a\";i:11;s:1:\"b\";s:20:\"force_delete_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:11;a:4:{s:1:\"a\";i:12;s:1:\"b\";s:24:\"force_delete_any_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:12;a:4:{s:1:\"a\";i:13;s:1:\"b\";s:9:\"view_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:13;a:4:{s:1:\"a\";i:14;s:1:\"b\";s:13:\"view_any_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:14;a:4:{s:1:\"a\";i:15;s:1:\"b\";s:11:\"create_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:15;a:4:{s:1:\"a\";i:16;s:1:\"b\";s:11:\"update_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:16;a:4:{s:1:\"a\";i:17;s:1:\"b\";s:12:\"restore_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:17;a:4:{s:1:\"a\";i:18;s:1:\"b\";s:16:\"restore_any_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:18;a:4:{s:1:\"a\";i:19;s:1:\"b\";s:14:\"replicate_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:19;a:4:{s:1:\"a\";i:20;s:1:\"b\";s:12:\"reorder_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:20;a:4:{s:1:\"a\";i:21;s:1:\"b\";s:11:\"delete_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:21;a:4:{s:1:\"a\";i:22;s:1:\"b\";s:15:\"delete_any_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:22;a:4:{s:1:\"a\";i:23;s:1:\"b\";s:17:\"force_delete_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:23;a:4:{s:1:\"a\";i:24;s:1:\"b\";s:21:\"force_delete_any_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:24;a:4:{s:1:\"a\";i:25;s:1:\"b\";s:13:\"view_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:25;a:4:{s:1:\"a\";i:26;s:1:\"b\";s:17:\"view_any_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:26;a:4:{s:1:\"a\";i:27;s:1:\"b\";s:15:\"create_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:27;a:4:{s:1:\"a\";i:28;s:1:\"b\";s:15:\"update_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:28;a:4:{s:1:\"a\";i:29;s:1:\"b\";s:16:\"restore_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:29;a:4:{s:1:\"a\";i:30;s:1:\"b\";s:20:\"restore_any_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:30;a:4:{s:1:\"a\";i:31;s:1:\"b\";s:18:\"replicate_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:31;a:4:{s:1:\"a\";i:32;s:1:\"b\";s:16:\"reorder_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:32;a:4:{s:1:\"a\";i:33;s:1:\"b\";s:15:\"delete_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:33;a:4:{s:1:\"a\";i:34;s:1:\"b\";s:19:\"delete_any_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:34;a:4:{s:1:\"a\";i:35;s:1:\"b\";s:21:\"force_delete_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:35;a:4:{s:1:\"a\";i:36;s:1:\"b\";s:25:\"force_delete_any_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:36;a:4:{s:1:\"a\";i:37;s:1:\"b\";s:9:\"view_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:37;a:4:{s:1:\"a\";i:38;s:1:\"b\";s:13:\"view_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:38;a:4:{s:1:\"a\";i:39;s:1:\"b\";s:11:\"create_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:39;a:4:{s:1:\"a\";i:40;s:1:\"b\";s:11:\"update_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:40;a:4:{s:1:\"a\";i:41;s:1:\"b\";s:11:\"delete_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:41;a:4:{s:1:\"a\";i:42;s:1:\"b\";s:15:\"delete_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:42;a:4:{s:1:\"a\";i:43;s:1:\"b\";s:9:\"view_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:43;a:4:{s:1:\"a\";i:44;s:1:\"b\";s:13:\"view_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:44;a:4:{s:1:\"a\";i:45;s:1:\"b\";s:11:\"create_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:45;a:4:{s:1:\"a\";i:46;s:1:\"b\";s:11:\"update_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:46;a:4:{s:1:\"a\";i:47;s:1:\"b\";s:12:\"restore_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:47;a:4:{s:1:\"a\";i:48;s:1:\"b\";s:16:\"restore_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:48;a:4:{s:1:\"a\";i:49;s:1:\"b\";s:14:\"replicate_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:49;a:4:{s:1:\"a\";i:50;s:1:\"b\";s:12:\"reorder_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:50;a:4:{s:1:\"a\";i:51;s:1:\"b\";s:11:\"delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:51;a:4:{s:1:\"a\";i:52;s:1:\"b\";s:15:\"delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:52;a:4:{s:1:\"a\";i:53;s:1:\"b\";s:17:\"force_delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:53;a:4:{s:1:\"a\";i:54;s:1:\"b\";s:21:\"force_delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:54;a:4:{s:1:\"a\";i:55;s:1:\"b\";s:12:\"page_Laporan\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:55;a:4:{s:1:\"a\";i:56;s:1:\"b\";s:15:\"page_Peminjaman\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:3;i:2;i:4;}}i:56;a:4:{s:1:\"a\";i:57;s:1:\"b\";s:17:\"page_Pengembalian\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:57;a:4:{s:1:\"a\";i:58;s:1:\"b\";s:21:\"page_RiwayatTransaksi\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:58;a:4:{s:1:\"a\";i:59;s:1:\"b\";s:27:\"widget_AnggotaTeraktifChart\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:2;i:2;i:3;}}i:59;a:4:{s:1:\"a\";i:60;s:1:\"b\";s:22:\"widget_PeminjamanChart\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:60;a:4:{s:1:\"a\";i:61;s:1:\"b\";s:20:\"widget_StatsOverview\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}}s:5:\"roles\";a:4:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:10:\"SuperAdmin\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:7:\"Petugas\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:3;s:1:\"b\";s:4:\"Guru\";s:1:\"c\";s:3:\"web\";}i:3;a:3:{s:1:\"a\";i:4;s:1:\"b\";s:7:\"Anggota\";s:1:\"c\";s:3:\"web\";}}}', 1775469170);
+('9109c85a45b703f87f1413a405549a2cea9ab556', 'i:1;', 1776138266),
+('9109c85a45b703f87f1413a405549a2cea9ab556:timer', 'i:1776138266;', 1776138266),
+('c5b76da3e608d34edb07244cd9b875ee86906328', 'i:1;', 1775711807),
+('c5b76da3e608d34edb07244cd9b875ee86906328:timer', 'i:1775711807;', 1775711807),
+('livewire-rate-limiter:57f7f3b1a5eda95047056a7b164ee2b48cb995a5', 'i:1;', 1776138237),
+('livewire-rate-limiter:57f7f3b1a5eda95047056a7b164ee2b48cb995a5:timer', 'i:1776138237;', 1776138237),
+('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1776138618),
+('livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1776138618;', 1776138618),
+('spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:61:{i:0;a:4:{s:1:\"a\";i:1;s:1:\"b\";s:12:\"view_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:1;a:4:{s:1:\"a\";i:2;s:1:\"b\";s:16:\"view_any_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:2;a:4:{s:1:\"a\";i:3;s:1:\"b\";s:14:\"create_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:3;a:4:{s:1:\"a\";i:4;s:1:\"b\";s:14:\"update_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:4;a:4:{s:1:\"a\";i:5;s:1:\"b\";s:15:\"restore_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:5;a:4:{s:1:\"a\";i:6;s:1:\"b\";s:19:\"restore_any_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:6;a:4:{s:1:\"a\";i:7;s:1:\"b\";s:17:\"replicate_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:7;a:4:{s:1:\"a\";i:8;s:1:\"b\";s:15:\"reorder_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:8;a:4:{s:1:\"a\";i:9;s:1:\"b\";s:14:\"delete_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:9;a:4:{s:1:\"a\";i:10;s:1:\"b\";s:18:\"delete_any_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:10;a:4:{s:1:\"a\";i:11;s:1:\"b\";s:20:\"force_delete_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:11;a:4:{s:1:\"a\";i:12;s:1:\"b\";s:24:\"force_delete_any_anggota\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:12;a:4:{s:1:\"a\";i:13;s:1:\"b\";s:9:\"view_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:13;a:4:{s:1:\"a\";i:14;s:1:\"b\";s:13:\"view_any_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:14;a:4:{s:1:\"a\";i:15;s:1:\"b\";s:11:\"create_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:15;a:4:{s:1:\"a\";i:16;s:1:\"b\";s:11:\"update_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:16;a:4:{s:1:\"a\";i:17;s:1:\"b\";s:12:\"restore_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:17;a:4:{s:1:\"a\";i:18;s:1:\"b\";s:16:\"restore_any_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:18;a:4:{s:1:\"a\";i:19;s:1:\"b\";s:14:\"replicate_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:19;a:4:{s:1:\"a\";i:20;s:1:\"b\";s:12:\"reorder_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:20;a:4:{s:1:\"a\";i:21;s:1:\"b\";s:11:\"delete_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:21;a:4:{s:1:\"a\";i:22;s:1:\"b\";s:15:\"delete_any_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:22;a:4:{s:1:\"a\";i:23;s:1:\"b\";s:17:\"force_delete_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:23;a:4:{s:1:\"a\";i:24;s:1:\"b\";s:21:\"force_delete_any_buku\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:24;a:4:{s:1:\"a\";i:25;s:1:\"b\";s:13:\"view_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:25;a:4:{s:1:\"a\";i:26;s:1:\"b\";s:17:\"view_any_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:26;a:4:{s:1:\"a\";i:27;s:1:\"b\";s:15:\"create_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:27;a:4:{s:1:\"a\";i:28;s:1:\"b\";s:15:\"update_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:28;a:4:{s:1:\"a\";i:29;s:1:\"b\";s:16:\"restore_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:29;a:4:{s:1:\"a\";i:30;s:1:\"b\";s:20:\"restore_any_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:30;a:4:{s:1:\"a\";i:31;s:1:\"b\";s:18:\"replicate_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:31;a:4:{s:1:\"a\";i:32;s:1:\"b\";s:16:\"reorder_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:32;a:4:{s:1:\"a\";i:33;s:1:\"b\";s:15:\"delete_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:33;a:4:{s:1:\"a\";i:34;s:1:\"b\";s:19:\"delete_any_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:34;a:4:{s:1:\"a\";i:35;s:1:\"b\";s:21:\"force_delete_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:35;a:4:{s:1:\"a\";i:36;s:1:\"b\";s:25:\"force_delete_any_kategori\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:36;a:4:{s:1:\"a\";i:37;s:1:\"b\";s:9:\"view_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:37;a:4:{s:1:\"a\";i:38;s:1:\"b\";s:13:\"view_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:38;a:4:{s:1:\"a\";i:39;s:1:\"b\";s:11:\"create_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:39;a:4:{s:1:\"a\";i:40;s:1:\"b\";s:11:\"update_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:40;a:4:{s:1:\"a\";i:41;s:1:\"b\";s:11:\"delete_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:41;a:4:{s:1:\"a\";i:42;s:1:\"b\";s:15:\"delete_any_role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:42;a:4:{s:1:\"a\";i:43;s:1:\"b\";s:9:\"view_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:43;a:4:{s:1:\"a\";i:44;s:1:\"b\";s:13:\"view_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:44;a:4:{s:1:\"a\";i:45;s:1:\"b\";s:11:\"create_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:45;a:4:{s:1:\"a\";i:46;s:1:\"b\";s:11:\"update_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:46;a:4:{s:1:\"a\";i:47;s:1:\"b\";s:12:\"restore_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:47;a:4:{s:1:\"a\";i:48;s:1:\"b\";s:16:\"restore_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:48;a:4:{s:1:\"a\";i:49;s:1:\"b\";s:14:\"replicate_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:49;a:4:{s:1:\"a\";i:50;s:1:\"b\";s:12:\"reorder_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:50;a:4:{s:1:\"a\";i:51;s:1:\"b\";s:11:\"delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:51;a:4:{s:1:\"a\";i:52;s:1:\"b\";s:15:\"delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:52;a:4:{s:1:\"a\";i:53;s:1:\"b\";s:17:\"force_delete_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:53;a:4:{s:1:\"a\";i:54;s:1:\"b\";s:21:\"force_delete_any_user\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:54;a:4:{s:1:\"a\";i:55;s:1:\"b\";s:12:\"page_Laporan\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:55;a:4:{s:1:\"a\";i:56;s:1:\"b\";s:15:\"page_Peminjaman\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:3:{i:0;i:1;i:1;i:3;i:2;i:4;}}i:56;a:4:{s:1:\"a\";i:57;s:1:\"b\";s:17:\"page_Pengembalian\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:57;a:4:{s:1:\"a\";i:58;s:1:\"b\";s:21:\"page_RiwayatTransaksi\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:4:{i:0;i:1;i:1;i:2;i:2;i:3;i:3;i:4;}}i:58;a:4:{s:1:\"a\";i:59;s:1:\"b\";s:27:\"widget_AnggotaTeraktifChart\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:59;a:4:{s:1:\"a\";i:60;s:1:\"b\";s:22:\"widget_PeminjamanChart\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:60;a:4:{s:1:\"a\";i:61;s:1:\"b\";s:20:\"widget_StatsOverview\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}}s:5:\"roles\";a:4:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:10:\"SuperAdmin\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:7:\"Petugas\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:3;s:1:\"b\";s:4:\"Guru\";s:1:\"c\";s:3:\"web\";}i:3;a:3:{s:1:\"a\";i:4;s:1:\"b\";s:7:\"Anggota\";s:1:\"c\";s:3:\"web\";}}}', 1776222830);
 
 -- --------------------------------------------------------
 
@@ -914,7 +924,20 @@ INSERT INTO `detail_peminjamans` (`id`, `peminjaman_id`, `buku_id`, `qty`, `crea
 (635, 256, 38, 2, '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (636, 257, 98, 2, '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (637, 258, 100, 1, '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
-(638, 258, 85, 1, '2026-04-05 07:47:57', '2026-04-05 07:47:57');
+(638, 258, 85, 1, '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
+(639, 259, 1, 1, '2026-04-06 13:36:41', '2026-04-06 13:36:41'),
+(640, 260, 1, 1, '2026-04-06 13:38:50', '2026-04-06 13:38:50'),
+(641, 261, 1, 1, '2026-04-07 01:28:44', '2026-04-07 01:28:44'),
+(642, 262, 1, 1, '2026-04-07 02:39:49', '2026-04-07 02:39:49'),
+(643, 263, 1, 1, '2026-04-07 02:59:36', '2026-04-07 02:59:36'),
+(644, 264, 3, 1, '2026-04-07 07:31:41', '2026-04-07 07:31:41'),
+(645, 265, 3, 7, '2026-04-07 07:34:42', '2026-04-07 07:34:42'),
+(646, 266, 1, 1, '2026-04-09 07:29:05', '2026-04-09 07:29:05'),
+(647, 267, 4, 1, '2026-04-09 08:17:38', '2026-04-09 08:17:38'),
+(648, 268, 5, 1, '2026-04-09 08:20:41', '2026-04-09 08:20:41'),
+(649, 269, 3, 1, '2026-04-09 08:36:26', '2026-04-09 08:36:26'),
+(650, 270, 3, 1, '2026-04-09 08:46:11', '2026-04-09 08:46:11'),
+(651, 271, 4, 1, '2026-04-14 03:47:18', '2026-04-14 03:47:18');
 
 -- --------------------------------------------------------
 
@@ -1110,7 +1133,10 @@ INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (4, 'App\\Models\\User', 51),
 (2, 'App\\Models\\User', 52),
 (4, 'App\\Models\\User', 53),
-(3, 'App\\Models\\User', 54);
+(3, 'App\\Models\\User', 54),
+(4, 'App\\Models\\User', 55),
+(4, 'App\\Models\\User', 56),
+(4, 'App\\Models\\User', 57);
 
 -- --------------------------------------------------------
 
@@ -1372,13 +1398,13 @@ INSERT INTO `peminjamans` (`id`, `anggota_id`, `kode_peminjaman`, `tanggal_pinja
 (224, 44, 'IGZ-6238OE', '2026-02-10', '2026-02-17', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (225, 44, 'IGZ-3525HL', '2026-04-04', '2026-04-11', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (226, 44, 'IGZ-0826NB', '2026-02-25', '2026-03-04', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
-(227, 44, 'IGZ-9066GH', '2026-03-27', '2026-04-03', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
+(227, 44, 'IGZ-9066GH', '2026-03-27', '2026-04-03', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-07 07:24:22'),
 (228, 44, 'IGZ-0369IP', '2026-02-22', '2026-03-01', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (229, 44, 'IGZ-8051MC', '2026-02-13', '2026-02-20', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (230, 45, 'IGZ-7462WE', '2026-03-10', '2026-03-17', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (231, 45, 'IGZ-0301RB', '2026-03-15', '2026-03-22', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (232, 45, 'IGZ-7348EA', '2026-03-03', '2026-03-10', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
-(233, 45, 'IGZ-2946GS', '2026-02-13', '2026-02-20', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
+(233, 45, 'IGZ-2946GS', '2026-02-13', '2026-02-20', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-07 01:27:45'),
 (234, 45, 'IGZ-5746QW', '2026-02-15', '2026-02-22', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (235, 46, 'IGZ-4578NE', '2026-03-22', '2026-03-29', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (236, 46, 'IGZ-9617QB', '2026-03-13', '2026-03-20', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
@@ -1401,9 +1427,22 @@ INSERT INTO `peminjamans` (`id`, `anggota_id`, `kode_peminjaman`, `tanggal_pinja
 (253, 49, 'IGZ-7688HC', '2026-03-04', '2026-03-11', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (254, 50, 'IGZ-7292EC', '2026-03-14', '2026-03-21', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (255, 50, 'IGZ-5677LA', '2026-03-05', '2026-03-12', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
-(256, 50, 'IGZ-0441RV', '2026-03-23', '2026-03-30', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
+(256, 50, 'IGZ-0441RV', '2026-03-23', '2026-03-30', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-14 03:53:16'),
 (257, 50, 'IGZ-0991QR', '2026-03-22', '2026-03-29', 'dipinjam', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
-(258, 50, 'IGZ-5030MH', '2026-03-08', '2026-03-15', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57');
+(258, 50, 'IGZ-5030MH', '2026-03-08', '2026-03-15', 'dikembalikan', '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
+(259, 51, 'IGZ-E3DRPSNA', '2026-04-06', '2026-04-13', 'dikembalikan', '2026-04-06 13:36:41', '2026-04-06 14:52:00'),
+(260, 51, 'IGZ-5ALMZVJA', '2026-04-06', '2026-04-13', 'dikembalikan', '2026-04-06 13:38:50', '2026-04-06 14:11:26'),
+(261, 51, 'IGZ-Q7YXPB5K', '2026-04-07', '2026-04-14', 'dikembalikan', '2026-04-07 01:28:44', '2026-04-07 01:31:24'),
+(262, 51, 'IGZ-2RC7RRVR', '2026-04-07', '2026-04-14', 'dikembalikan', '2026-04-07 02:39:49', '2026-04-07 02:56:46'),
+(263, 51, 'IGZ-RHL3B5XI', '2026-04-07', '2026-04-14', 'dikembalikan', '2026-04-07 02:59:36', '2026-04-07 03:02:05'),
+(264, 51, 'IGZ-R9FRZWWQ', '2026-04-07', '2026-04-14', 'dikembalikan', '2026-04-07 07:31:41', '2026-04-09 07:27:20'),
+(265, 53, 'IGZ-YWWBCIKP', '2026-04-07', '2026-04-14', 'dipinjam', '2026-04-07 07:34:42', '2026-04-07 07:37:19'),
+(266, 51, 'IGZ-QPBKYN83', '2026-04-09', '2026-04-16', 'dikembalikan', '2026-04-09 07:29:05', '2026-04-09 08:12:47'),
+(267, 51, 'IGZ-2BU9GDCF', '2026-04-09', '2026-04-16', 'dikembalikan', '2026-04-09 08:17:37', '2026-04-09 08:18:10'),
+(268, 51, 'IGZ-BVXBZJNV', '2026-04-09', '2026-04-16', 'dikembalikan', '2026-04-09 08:20:41', '2026-04-09 08:27:31'),
+(269, 51, 'IGZ-XG6HSIIR', '2026-04-09', '2026-04-16', 'dikembalikan', '2026-04-09 08:36:26', '2026-04-09 08:37:23'),
+(270, 51, 'IGZ-GOIFRM28', '2026-04-09', '2026-04-16', 'dikembalikan', '2026-04-09 08:46:11', '2026-04-09 08:46:43'),
+(271, 54, 'IGZ-CPOD464N', '2026-04-14', '2026-04-21', 'dikembalikan', '2026-04-14 03:47:18', '2026-04-14 03:54:14');
 
 -- --------------------------------------------------------
 
@@ -1563,7 +1602,23 @@ INSERT INTO `pengembalians` (`id`, `peminjaman_id`, `tanggal_kembali`, `denda`, 
 (135, 249, '2026-04-12', '2000.00', NULL, '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (136, 252, '2026-03-08', '2000.00', NULL, '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
 (137, 255, '2026-03-14', '2000.00', NULL, '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
-(138, 258, '2026-03-16', '1000.00', NULL, '2026-04-05 07:47:57', '2026-04-05 07:47:57');
+(138, 258, '2026-03-16', '1000.00', NULL, '2026-04-05 07:47:57', '2026-04-05 07:47:57'),
+(139, 260, '2026-04-06', '0.00', '', '2026-04-06 14:11:26', '2026-04-06 14:11:26'),
+(140, 259, '2026-04-06', '0.00', '', '2026-04-06 14:52:00', '2026-04-06 14:52:00'),
+(141, 233, '2026-04-07', '46000.00', '', '2026-04-07 01:27:45', '2026-04-07 01:27:45'),
+(142, 261, '2026-04-07', '0.00', '', '2026-04-07 01:31:24', '2026-04-07 01:31:24'),
+(143, 262, '2026-04-07', '0.00', '', '2026-04-07 02:56:46', '2026-04-07 02:56:46'),
+(144, 263, '2026-04-07', '0.00', '', '2026-04-07 03:02:05', '2026-04-07 03:02:05'),
+(145, 227, '2026-04-07', '1600.00', '', '2026-04-07 07:24:22', '2026-04-07 07:24:22'),
+(146, 264, '2026-04-09', '0.00', '', '2026-04-09 07:27:20', '2026-04-09 07:27:20'),
+(147, 266, '2026-04-09', '0.00', '', '2026-04-09 08:12:47', '2026-04-09 08:12:47'),
+(148, 267, '2026-04-09', '0.00', '', '2026-04-09 08:18:10', '2026-04-09 08:18:10'),
+(149, 268, '2026-04-09', '0.00', '', '2026-04-09 08:21:03', '2026-04-09 08:21:03'),
+(150, 268, '2026-04-09', '0.00', '', '2026-04-09 08:27:31', '2026-04-09 08:27:31'),
+(151, 269, '2026-04-09', '0.00', '', '2026-04-09 08:37:23', '2026-04-09 08:37:23'),
+(152, 270, '2026-04-09', '0.00', '', '2026-04-09 08:46:43', '2026-04-09 08:46:43'),
+(153, 256, '2026-04-14', '22500.00', '', '2026-04-14 03:53:16', '2026-04-14 03:53:16'),
+(154, 271, '2026-04-14', '0.00', '', '2026-04-14 03:54:14', '2026-04-14 03:54:14');
 
 -- --------------------------------------------------------
 
@@ -1809,7 +1864,6 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (46, 3),
 (56, 3),
 (58, 3),
-(59, 3),
 (1, 4),
 (2, 4),
 (4, 4),
@@ -1839,8 +1893,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('Rpk7JgPwmtiWgAxXtJrArA8L6YNLCPxiS0I9Pzae', 53, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoidHZla090WXJmcldaTWhNYzBBR3o0eEYyQXNCbWI1OUJHbFRqN05ibiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mzg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9wZW1pbmphbWFuIjtzOjU6InJvdXRlIjtzOjMxOiJmaWxhbWVudC5hZG1pbi5wYWdlcy5wZW1pbmphbWFuIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6NTM7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjQ6ImM5MjQ3NTNlYzVjMmJmMDFhMzg4N2NkYWRhZGFmODk3MGUxZjcyMjIzNmQxNmU0YWFhODVkZDc4MTgyZGE1NDciO30=', 1775393564),
-('Tcil6fDmDy53RInYd4gA1V8guvwvndt8cKpnG3ML', 53, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoidnE3bGk3OWN5UUp5RE9TZnY2a1NqWEpnWWxKa0U2QXlyMWpIOGlpTCI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjI6e3M6MzoidXJsIjtzOjM4OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vcGVtaW5qYW1hbiI7czo1OiJyb3V0ZSI7czozMToiZmlsYW1lbnQuYWRtaW4ucGFnZXMucGVtaW5qYW1hbiI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjUzO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjY0OiJjOTI0NzUzZWM1YzJiZjAxYTM4ODdjZGFkYWRhZjg5NzBlMWY3MjIyMzZkMTZlNGFhYTg1ZGQ3ODE4MmRhNTQ3Ijt9', 1775391189);
+('YqaZ71cmT23GHzgikIBPvtNWTUPK0pH00UHQTD6L', 52, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiS3REN3lWTmFVRVFmVEI0V0hPSFRoUFR5RGo5c2Z1RU5PRURGeERzaCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Nzk6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcmludC9sYXBvcmFuLXBlbWluamFtYW4/YWtoaXI9MjAyNi0wNC0xNCZhd2FsPTIwMjYtMDMtMDEiO3M6NToicm91dGUiO3M6MjQ6InByaW50LmxhcG9yYW4ucGVtaW5qYW1hbiI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjUyO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjY0OiJiYzM4YjgyZTk1YWE0NmRlMzhmZWY0NTE2MDlkZjllZjYxMjMyNDU5MThmOTA1ODc5ZGJhM2YyOWRiNTUxMjE4IjtzOjg6ImZpbGFtZW50IjthOjA6e319', 1776138935);
 
 -- --------------------------------------------------------
 
@@ -1915,9 +1968,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (49, 'Mr. Blaze Will', 'ivah.corkery@example.com', '2026-04-05 07:47:52', '$2y$12$rl3sEsi4.Q7Bu4xW0hBDlOaTvXi0tU56/etHpP2w3OBYeFz7SrDhW', 'jnVA8UllZv', '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
 (50, 'Hailee Hill', 'syble.koelpin@example.org', '2026-04-05 07:47:52', '$2y$12$pjaHYOOTxt7de/8pDWEuKeqZS0Tw/DNlXwLUWRWDGIsayl685wQHu', 'wdSzfaU3NP', '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
 (51, 'Martin Kihn', 'douglas.trace@example.org', '2026-04-05 07:47:52', '$2y$12$SppoZhX0.TtWA5QGIw.iDeov4asOXz13NNJXyLGuiPgGs3kNILc22', 'Ftlu6JfZfH', '2026-04-05 07:47:53', '2026-04-05 07:47:53'),
-(52, 'Petugas', 'petugas@example.com', NULL, '$2y$12$j9ItbHVE7jYw6zqhZ8dc6.ErxStan76zzItzhuTN23gsSx3PL4g0G', NULL, '2026-04-05 11:33:33', '2026-04-05 11:33:33'),
-(53, 'Fajar', 'example@example.com', NULL, '$2y$12$wnWf6s7ENE6t1aCvsNMpxupa/nO3KvBauGJqt.f10b9cRlnFGbG4G', NULL, '2026-04-05 11:33:52', '2026-04-05 11:33:52'),
-(54, 'Guru', 'guru@example.com', NULL, '$2y$12$VHBC3BbuG0Gzh5fuLvyXzODj7AX8GtLrSInoJpgOwmqGWaLuSvsdm', NULL, '2026-04-05 11:34:03', '2026-04-05 11:34:03');
+(52, 'Petugas', 'petugas@example.com', '2026-04-09 05:11:05', '$2y$12$j9ItbHVE7jYw6zqhZ8dc6.ErxStan76zzItzhuTN23gsSx3PL4g0G', NULL, '2026-04-05 11:33:33', '2026-04-05 11:33:33'),
+(53, 'Fajar', 'fajarrijkipaujan2007@gmail.com', '2026-04-09 05:15:47', '$2y$12$tvdRnnsxpqsyOKg7ilFGZ.Wa2PT7JkLDk3eukVzmrLyTVR.8buYlO', NULL, '2026-04-05 11:33:52', '2026-04-09 05:15:47'),
+(54, 'Guru', 'guru@example.com', NULL, '$2y$12$VHBC3BbuG0Gzh5fuLvyXzODj7AX8GtLrSInoJpgOwmqGWaLuSvsdm', NULL, '2026-04-05 11:34:03', '2026-04-05 11:34:03'),
+(55, 'test', 'test@example.com', NULL, '$2y$12$IHIJ2NSiDPphysXmbnR1xO9ceTVWm8gwN6NHWUhX.7Gh0gBie4M0G', NULL, '2026-04-07 07:12:59', '2026-04-07 07:12:59'),
+(56, 'test2', 'test2@example.com', NULL, '$2y$12$Eusr7huXNQYidIll2VgxCOfXsiB5spHWTD4MTkBOoqRw4E0n13LRy', NULL, '2026-04-07 07:13:55', '2026-04-07 07:13:55'),
+(57, 'anggota345', 'fajarberto2007@gmail.com', '2026-04-14 03:43:26', '$2y$12$MsgVhuWhO51Ch5/jghxlZuYetlU6j6N0uLZq62aBXTMtZe/k9UHv6', NULL, '2026-04-14 03:15:19', '2026-04-14 03:43:26');
 
 --
 -- Indexes for dumped tables
@@ -2072,7 +2128,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `anggotas`
 --
 ALTER TABLE `anggotas`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `bukus`
@@ -2084,7 +2140,7 @@ ALTER TABLE `bukus`
 -- AUTO_INCREMENT for table `detail_peminjamans`
 --
 ALTER TABLE `detail_peminjamans`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=639;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=652;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -2114,13 +2170,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `peminjamans`
 --
 ALTER TABLE `peminjamans`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=272;
 
 --
 -- AUTO_INCREMENT for table `pengembalians`
 --
 ALTER TABLE `pengembalians`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
 
 --
 -- AUTO_INCREMENT for table `permissions`
@@ -2138,7 +2194,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- Constraints for dumped tables
